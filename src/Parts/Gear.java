@@ -16,6 +16,10 @@ public class Gear {
         this.teethNum=teethNum;
 
     }
+    public Gear(int teethNum){
+        this.teethNum=teethNum;
+
+    }
 
     public void setName(String name) {
         this.name = name;

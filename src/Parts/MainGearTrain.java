@@ -9,8 +9,9 @@ public class MainGearTrain {
     private Pin cPin;
     private Pin bPin;
 
-    public MainGearTrain(Gear e,Gear fw,Gear fp,Gear tw,Gear tp,Gear cw,Gear cp,Gear bw) throws FullPinionError {
-        this.ePin.addGears(e);
+    public MainGearTrain(Gear ew,Gear ep,Gear fw,Gear fp,Gear tw,Gear tp,Gear cw) throws FullPinionError {
+        this.ePin.addGears(ep);
+        this.ePin.addGears(ew);
 
         this.fPin.addGears(fw);
         this.fPin.addGears(fp);
@@ -19,9 +20,7 @@ public class MainGearTrain {
         this.tPin.addGears(tp);
 
         this.cPin.addGears(cw);
-        this.cPin.addGears(cp);
 
-        this.bPin.addGears(bw);
 
     }
 

@@ -1,11 +1,14 @@
 package Parts;
 
+import Errors.FullPinionError;
+
 import java.util.ArrayList;
 
 public class Clock {
 
-    public void makeTrain(int min,int max,double mod, double BpH, int E, double d){
+    public void makeTrain(int min,int max,double mod, double BpH, int E, double d) throws FullPinionError {
         ArrayList<Double[]> options= new ArrayList<Double[]>();
+        Gear EW = new Gear(E);
 
         for(double C=max; C>=min;C--){
             for(double T=max;T>=min;T--){
@@ -39,7 +42,7 @@ public class Clock {
                                                         }
                                                     }
                                                     if(sCount==2){
-                                                        options.add(train);
+                                                        MainGearTrain g = new MainGearTrain(EW,eW,FW,fW,TW,tW,cW);
                                                     }
                                                 }
                                             }
